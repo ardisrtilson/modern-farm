@@ -1,3 +1,3 @@
-import {field} from "./tractor.js"
+import {plants} from "./tractor.js"
 console.log("Welcome to the main module")
-console.log(field)
+console.log(plants)
