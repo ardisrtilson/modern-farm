@@ -1,11 +1,9 @@
-import {plantSeeds} from "./tractor.js"
-import {createPlan} from "./plan.js"
-const plan = createPlan()
-const field = plantSeeds(plan)
-const harvest = []
-export const harvestSeeds = (field) => {
-    for(const steps of field) {
-        harvest.push(steps)
+import {plants} from "./tractor.js"
+const toHarvest = plants
+export const harvestPlants = (toHarvest) => {
+    let seedObjects = []
+    for(plants of toHarvest) {
+        seedObjects.push
     }
-return harvest
+    return seedObjects
 }

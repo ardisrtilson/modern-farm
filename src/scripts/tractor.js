@@ -41,5 +41,5 @@ for (const step of plan) {
 }
 return planted
 }
-
+export const plants = usePlants ()
 }
