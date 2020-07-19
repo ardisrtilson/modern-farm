@@ -5,7 +5,6 @@ import {createPotato} from "./seeds/potato.js"
 import {createSoybean} from "./seeds/soybean.js"
 import {createSunflower} from "./seeds/sunflower.js"
 import {createWheat} from "./seeds/wheat.js"
-import {createPlan} from "./plan.js"
 
 const asparagus = createAsparagus()
 const corn = createCorn()
@@ -13,9 +12,9 @@ const potato = createPotato()
 const soybean = createSoybean()
 const sunflower = createSunflower()
 const wheat = createWheat()
-const plan = createPlan()
+const planted = []
 
-
+export const plantSeeds = (plan) => {
 for (const step of plan) { 
     for (const subStep of step){
         switch (subStep) {
@@ -38,7 +37,9 @@ for (const step of plan) {
                 addPlant(corn);
                 break;
        }
+       planted.push(subStep)
 }
+return planted
 }
 
-export const field = usePlants ()
+}

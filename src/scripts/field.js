@@ -1,7 +1,7 @@
 const field = []
 
-export const addPlant = (plant) => {
-    field.push(plant)
+export const addPlant = (seed) => {
+    field.push(seed)
 }
 
 export const usePlants = () => {
