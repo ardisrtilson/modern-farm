@@ -1,9 +1,13 @@
-import {plants} from "./tractor.js"
-const toHarvest = plants
-export const harvestPlants = (toHarvest) => {
-    let seedObjects = []
-    for(plants of toHarvest) {
-        seedObjects.push
+
+export const harvestPlants = (used) => {
+const uses = []
+const cornChecker = []
+for (const step of used){
+    const output = step.output
+    const parsedOutput = parseInt(output, 10)
+    for (let i = 0; i < parsedOutput; i++) {
+        uses.push(step)
     }
-    return seedObjects
+}
+return uses
 }
