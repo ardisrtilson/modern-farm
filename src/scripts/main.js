@@ -1,3 +1,7 @@
-import {plants} from "./tractor.js"
-console.log("Welcome to the main module")
-console.log(plants)
+import {plantSeeds} from "./tractor.js"
+import {createPlan} from "./plan.js"
+
+const plan = createPlan()
+const planted = plantSeeds(plan)
+console.log(plan)
+console.log(planted)

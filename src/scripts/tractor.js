@@ -12,9 +12,9 @@ const potato = createPotato()
 const soybean = createSoybean()
 const sunflower = createSunflower()
 const wheat = createWheat()
-const planted = []
 
 export const plantSeeds = (plan) => {
+const planted = []
 for (const step of plan) { 
     for (const subStep of step){
         switch (subStep) {
@@ -39,7 +39,6 @@ for (const step of plan) {
        }
        planted.push(subStep)
 }
-return planted
 }
-export const plants = usePlants ()
+return planted
 }
