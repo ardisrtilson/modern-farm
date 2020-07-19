@@ -1,44 +1,36 @@
-import {addPlant, usePlants} from "./field.js"
 import {createAsparagus} from "./seeds/asparagus.js"
 import {createCorn} from "./seeds/corn.js"
 import {createPotato} from "./seeds/potato.js"
 import {createSoybean} from "./seeds/soybean.js"
 import {createSunflower} from "./seeds/sunflower.js"
 import {createWheat} from "./seeds/wheat.js"
-
-const asparagus = createAsparagus()
-const corn = createCorn()
-const potato = createPotato()
-const soybean = createSoybean()
-const sunflower = createSunflower()
-const wheat = createWheat()
+import {addPlant} from "./field.js"
 
 export const plantSeeds = (plan) => {
-const planted = []
+let planted = []
 for (const step of plan) { 
     for (const subStep of step){
         switch (subStep) {
             case "Asparagus":
-                addPlant(asparagus);
+                planted = createAsparagus()
                 break;
             case "Potato":
-                addPlant(potato);
+                planted = createPotato()
                 break;
             case "Sunflower":
-                addPlant(sunflower);
+                planted = createSunflower()
                 break;
             case "Wheat":
-                addPlant(wheat);
+                planted = createWheat()
                 break;
             case "Soybean":
-                addPlant(soybean);
+                planted = createSoybean()
                 break;
             case "Corn":
-                addPlant(corn);
+                planted = createCorn()
                 break;
        }
-       planted.push(subStep)
+       addPlant(planted)
 }
 }
-return planted
 }
