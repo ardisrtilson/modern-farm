@@ -1,4 +1,3 @@
-import { createPlan } from "../src/scripts/plan.js"
 import { plantSeeds } from "../src/scripts/tractor.js";
 import { usePlants } from "../src/scripts/field.js";
 import { createCorn } from "../src/scripts/seeds/corn.js";
