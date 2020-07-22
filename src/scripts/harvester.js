@@ -1,6 +1,8 @@
 
 export const harvestPlants = (used) => {
+
 const uses = []
+
 for (const step of used){
     let output = step.output
     let parsedOutput = parseInt(output, 10)
